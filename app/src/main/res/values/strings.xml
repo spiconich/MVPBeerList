@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">BeerList</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="tagline">Таглайн: %s</string>
-    <string name="firstBrewed">Произведен впервые: %s</string>
-    <string name="id">Идентификатор: %d</string>
-    <string name="beer_list">Список пива</string>
-</resources>
