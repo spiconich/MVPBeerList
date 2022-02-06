@@ -16,13 +16,6 @@ import space.spitsa.mvpbeerlist.R
 class DetailFragment : Fragment() {
 
     private val TAG = "DetailView"
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        Log.e(TAG,object{}.javaClass.enclosingMethod.name)
-
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -90,5 +83,5 @@ class DetailFragment : Fragment() {
             .error(R.drawable.ic_launcher_foreground)
             .into(imageV)
     }
-    
+
 }
