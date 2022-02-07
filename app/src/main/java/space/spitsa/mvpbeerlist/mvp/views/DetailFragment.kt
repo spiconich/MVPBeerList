@@ -57,25 +57,28 @@ class DetailFragment : Fragment() {
         val abvTV = view.findViewById<TextView>(R.id.beer_list_detail_abv)
         val imageV = view.findViewById<ImageView>(R.id.beer_list_detail_image)
 
-        toolbar.title=name
+        toolbar.title = name
         descriptionTV.text = description
         ibuTV.text = "Ibu: $ibu"
         abvTV.text = "Abv: $abv"
 
-        taglineTV.text= resources.getString(
+        taglineTV.text = resources.getString(
 
             R.string.tagline,
-            tagline)
+            tagline
+        )
 
         firstBrewedTV.text = resources.getString(
 
             R.string.firstBrewed,
-            firstBrewed)
+            firstBrewed
+        )
 
         idTV.text = resources.getString(
 
             R.string.id,
-            id)
+            id
+        )
 
         Picasso.with(context)
             .load(imageUrl)

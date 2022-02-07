@@ -20,7 +20,7 @@ class ListPresenter (
     private val listModel= ListModel()
     private var beerList:List<Beer>?=null
     lateinit var scope: CoroutineScope
-
+    lateinit var lifeCycle:Lifecycle
     private val TAG = "List Presenter"
 
     override val coroutineContext: CoroutineContext
@@ -62,9 +62,16 @@ class ListPresenter (
 
         Log.e(TAG,object{}.javaClass.enclosingMethod.name)
 
+        lifeCycle=viewLifecycle
         viewLifecycle.addObserver(this)
     }
 
+    fun removeObserver(viewLifecycle: Lifecycle) {
+
+        Log.e(TAG,object{}.javaClass.enclosingMethod.name)
+
+        viewLifecycle.addObserver(this)
+    }
     override fun packBundle(beer: Beer):Bundle {
 
         Log.e(TAG,object{}.javaClass.enclosingMethod.name)
@@ -92,6 +99,7 @@ class ListPresenter (
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     fun onDestroy() {
 
+        lifeCycle.removeObserver(this)
         supervisorJob.cancel()
     }
 

@@ -25,7 +25,6 @@ class ListFragment : ListContract.View, clickedBeerInterface, Fragment() {
 
     private lateinit var listPresenter: ListPresenter
     private lateinit var recyclerView: RecyclerView
-    private var clickedImage: Drawable? = null
     private val TAG ="List View"
 
     @Override
@@ -34,7 +33,6 @@ class ListFragment : ListContract.View, clickedBeerInterface, Fragment() {
         Log.e(TAG,object{}.javaClass.enclosingMethod.name)
 
         val bundle = listPresenter.packBundle(beer)
-        clickedImage = image
         val manager = requireActivity().supportFragmentManager
         val transaction = manager.beginTransaction()
         val beerDetailFragment = DetailFragment()
