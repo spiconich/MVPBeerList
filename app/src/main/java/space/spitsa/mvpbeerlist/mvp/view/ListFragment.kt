@@ -1,4 +1,4 @@
-package space.spitsa.mvpbeerlist.mvp.views
+package space.spitsa.mvpbeerlist.mvp.view
 
 import android.graphics.drawable.Drawable
 import android.os.Bundle
@@ -13,15 +13,15 @@ import androidx.lifecycle.LifecycleRegistry
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.facebook.shimmer.ShimmerFrameLayout
-import space.spitsa.mvpbeerlist.mvp.сontracts.ListContract
-import space.spitsa.mvpbeerlist.mvp.presenters.ListPresenter
+import space.spitsa.mvpbeerlist.mvp.сontract.ListContract
+import space.spitsa.mvpbeerlist.mvp.presenter.ListPresenter
 import space.spitsa.mvpbeerlist.R
 import space.spitsa.mvpbeerlist.mvp.Beer
-import space.spitsa.mvpbeerlist.ui.adapters.BeerAdapter
-import space.spitsa.mvpbeerlist.ui.adapters.clickedBeerInterface
+import space.spitsa.mvpbeerlist.ui.adapter.BeerAdapter
+import space.spitsa.mvpbeerlist.ui.adapter.СlickedBeerInterface
 
 
-class ListFragment : ListContract.View, clickedBeerInterface, Fragment() {
+class ListFragment : ListContract.View, СlickedBeerInterface, Fragment() {
 
     private lateinit var listPresenter: ListPresenter
     private lateinit var recyclerView: RecyclerView

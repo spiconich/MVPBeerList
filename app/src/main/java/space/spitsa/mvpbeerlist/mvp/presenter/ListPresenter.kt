@@ -1,4 +1,4 @@
-package space.spitsa.mvpbeerlist.mvp.presenters
+package space.spitsa.mvpbeerlist.mvp.presenter
 
 import android.os.Bundle
 import android.util.Log
@@ -8,13 +8,14 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import space.spitsa.mvpbeerlist.mvp.Beer
-import space.spitsa.mvpbeerlist.mvp.сontracts.ListContract
-import space.spitsa.mvpbeerlist.mvp.models.ListModel
+import space.spitsa.mvpbeerlist.mvp.сontract.ListContract
+import space.spitsa.mvpbeerlist.mvp.repository.ListModel
 import kotlin.coroutines.CoroutineContext
 
 class ListPresenter (
 
-    private var listView: ListContract.View?): ListContract.Presenter, LifecycleObserver,CoroutineScope{
+    private var listView: ListContract.View?
+    ): ListContract.Presenter, LifecycleObserver, CoroutineScope{
 
     private val supervisorJob = SupervisorJob()
     private val listModel= ListModel()

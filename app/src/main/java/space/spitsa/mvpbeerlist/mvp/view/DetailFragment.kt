@@ -1,6 +1,5 @@
-package space.spitsa.mvpbeerlist.mvp.views
+package space.spitsa.mvpbeerlist.mvp.view
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment

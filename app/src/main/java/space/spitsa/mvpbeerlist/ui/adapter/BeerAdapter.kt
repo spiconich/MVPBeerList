@@ -1,24 +1,22 @@
-package space.spitsa.mvpbeerlist.ui.adapters
+package space.spitsa.mvpbeerlist.ui.adapter
 
 import android.graphics.drawable.Drawable
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.facebook.shimmer.ShimmerFrameLayout
 import com.squareup.picasso.Picasso
 import space.spitsa.mvpbeerlist.R
 import space.spitsa.mvpbeerlist.mvp.Beer
 
-interface clickedBeerInterface {
+interface СlickedBeerInterface {
 
     fun onClick(beer: Beer, image:Drawable?)
 }
 class BeerAdapter(
-    private val listener: clickedBeerInterface,
+    private val listener: СlickedBeerInterface,
     private val beers: List<Beer>,
     private val rowLayout: Int
 ) : RecyclerView.Adapter<BeerAdapter.BeerViewHolder>() {

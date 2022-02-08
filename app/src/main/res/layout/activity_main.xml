@@ -4,5 +4,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/list_fragment"
-    android:name="space.spitsa.mvpbeerlist.mvp.views.ListFragment">
+    android:name="space.spitsa.mvpbeerlist.mvp.view.ListFragment">
 </androidx.fragment.app.FragmentContainerView>

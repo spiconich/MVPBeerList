@@ -1,8 +1,6 @@
-package space.spitsa.mvpbeerlist.mvp.сontracts
+package space.spitsa.mvpbeerlist.mvp.сontract
 
-import android.content.Context
 import android.os.Bundle
-import androidx.annotation.Nullable
 import androidx.lifecycle.Lifecycle
 import space.spitsa.mvpbeerlist.mvp.Beer
 
